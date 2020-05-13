@@ -15,16 +15,21 @@ export class InscriptionComponent implements OnInit {
   //employee: Observable<User[]>;
   //employee: User;
 
- user: User= new User("","") ;
+ user: User= new User;
  // user: Observable<User[]>;
   message: any;
-  constructor(private userService: InscriptionService) { }
+  constructor(private userService: InscriptionService,private router: Router) { }
   ngOnInit() {
   }
 
   save() {
     let resp=this.userService.createEmployee(this.user);
     resp.subscribe((data) =>this.message=data );
+    this.gotoList();
+  }
+
+  gotoList() {
+    this.router.navigate(['/users']);
   }
 
 }

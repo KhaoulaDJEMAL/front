@@ -28,8 +28,9 @@
             <td>{{user.fname}}</td>
             <td>{{user.lname}}</td>
             <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+            <button  (click)="updateEmployee(user.id)"  class="btn btn-info" style="margin-left: 10px">Update</button>
           </tr>
         </tbody>
       </table>
     </div>
-  </div>
+</div>

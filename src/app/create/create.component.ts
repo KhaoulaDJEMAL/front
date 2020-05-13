@@ -19,6 +19,10 @@ public deleteUser(id:number){
   let resp= this.createService.deleteUser(id);
   resp.subscribe((data)=> this.users =data);
 }
+updateEmployee(id: number){
+  this.router.navigate(['update',id]) ;
+}
+
 public findUserByFname(){
   let resp= this.createService.getUserByFname(this.fname);
   resp.subscribe((data)=> this.users =data);
@@ -32,7 +36,7 @@ public findUserByFname(){
   reloadData() {
     this.users = this.createService.getUsersList();
   }
-
+ 
 
 
 }

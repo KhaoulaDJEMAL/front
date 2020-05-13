@@ -7,12 +7,15 @@ import { CreateComponent } from './create/create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    UpdateComponent,
+    
   ],
   imports: [
     BrowserModule,
