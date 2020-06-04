@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CreateService } from './create.service';
+import { CreateService } from '../service/create.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { User } from '../user';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-create',
@@ -39,5 +39,6 @@ updateEmployee(id: number){
 
 reloadData() {
     this.users = this.createService.getUsersList();
+    console.log("alooo",this.users);
   }
 }

@@ -1,0 +1,105 @@
+<h3>Inscription d'un Candidat </h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="name">cin</label>
+      <input type="text" class="form-control" id="cin" required [(ngModel)]="candidatBv.cin" name="cin">
+    </div>
+
+    <div class="form-group">
+        <label for="name">dateCin</label>
+        <input type="date" class="form-control" id="dateCin" required [(ngModel)]="candidatBv.dateCin" name="dateCin">
+    </div>
+
+    <div class="form-group">
+        <label for="name">lieuCin</label>
+        <input type="text" class="form-control" id="lieuCin" required [(ngModel)]="candidatBv.lieuCin" name="lieuCin">
+    </div>
+
+    <div class="form-group">
+        <label for="name">nom</label>
+        <input type="text" class="form-control" id="nom" required [(ngModel)]="candidatBv.nom" name="nom">
+    </div>
+
+    <div class="form-group">
+        <label for="name">prenom</label>
+        <input type="text" class="form-control" id="prenom" required [(ngModel)]="candidatBv.prenom" name="prenom">
+    </div>
+
+    <div class="form-group">
+        <label for="name">dateNaissance</label>
+        <input type="date" class="form-control" id="dateNaissance" required [(ngModel)]="candidatBv.dateNaissance" name="dateNaissance">
+    </div>
+
+    <div class="form-group">
+        <label for="name">lieuNaissance</label>
+        <input type="text" class="form-control" id="lieuNaissance" required [(ngModel)]="candidatBv.lieuNaissance" name="lieuNaissance">
+    </div>
+
+    <div class="form-group">
+        <label for="name">mobile</label>
+        <input type="text" class="form-control" id="mobile" required [(ngModel)]="candidatBv.mobile" name="mobile">
+    </div>
+
+    <div class="form-group">
+        <label for="name">email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="candidatBv.email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="name">specialite</label>
+        <input type="text" class="form-control" id="specialite" required [(ngModel)]="candidatBv.specialite" name="specialite">
+    </div>
+
+    <div class="form-group">
+        <label for="name">dateObtentionDiplome</label>
+        <input type="date" class="form-control" id="dateObtentionDiplome" required [(ngModel)]="candidatBv.dateObtentionDiplome" name="dateObtentionDiplome">
+    </div>
+
+    <div class="form-group">
+        <label for="name">profession</label>
+        <input type="text" class="form-control" id="profession" required [(ngModel)]="candidatBv.profession" name="profession">
+    </div>
+
+    <div class="form-group">
+        <label for="name">dateCandidature</label>
+        <input type="date" class="form-control" id="dateCandidature" required [(ngModel)]="candidatBv.dateCandidature" name="dateCandidature">
+    </div>
+
+    <div class="form-group">
+        <label for="name">zoneConsulaireId</label>
+        <input type="text" class="form-control" id="zoneConsulaireId" required [(ngModel)]="candidatBv.zoneConsulaireId" name="zoneConsulaireId">
+    </div>
+
+    <div class="form-group">
+        <label for="name">circonscriptionId</label>
+        <input type="text" class="form-control" id="circonscriptionId" required [(ngModel)]="candidatBv.circonscriptionId" name="circonscriptionId">
+    </div>
+
+   <div class="form-group">
+        <label for="name">sexe</label>
+        <input type="text" class="form-control" id="sexe" required [(ngModel)]="candidatBv.sexe" name="sexe">
+    </div> 
+
+    <div class="form-group">
+        <label for="name">adresseId</label>
+        <input type="text" class="form-control" id="adresseId" required [(ngModel)]="candidatBv.adresseId" name="adresseId">
+    </div>
+
+    <div class="form-group">
+        <label for="name">fonctionId</label>
+        <input type="text" class="form-control" id="fonctionId" required [(ngModel)]="candidatBv.fonctionId" name="fonctionId">
+    </div>
+
+    <div class="form-group">
+        <label for="name">niveauEtudeId</label>
+        <input type="text" class="form-control" id="niveauEtudeId" required [(ngModel)]="candidatBv.niveauEtudeId" name="niveauEtudeId">
+    </div>
+
+    <div class="form-group">
+        <label for="name">pjCandidatureBvId</label>
+        <input type="text" class="form-control" id="pjCandidatureBvId" required [(ngModel)]="candidatBv.pjCandidatureBvId" name="pjCandidatureBvId">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

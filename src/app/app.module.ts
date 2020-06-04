@@ -11,6 +11,7 @@ import { UpdateComponent } from './update/update.component';
 import { CompteComponent } from './compte/compte.component';
 import { HomeComponent } from './compte/home/home.component';
 import { LoginComponent } from './compte/login/login.component';
+import { CandidatBvComponent } from './candidat-bv/candidat-bv.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './compte/login/login.component';
     UpdateComponent,
     CompteComponent,    
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CandidatBvComponent
   ],
   imports: [
     BrowserModule,

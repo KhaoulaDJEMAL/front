@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { InscriptionService } from './inscription.service';
+import { InscriptionService } from '../service/inscription.service';
 import { Observable, Subscription } from 'rxjs';
-import { User } from '../user';
-import { CreateService } from '../create/create.service';
+import { User } from '../models/user';
+import { CreateService } from '../service/create.service';
 import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { CreateComponent } from '../create/create.component';
 

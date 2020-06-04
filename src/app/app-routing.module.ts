@@ -6,10 +6,12 @@ import { UpdateComponent } from './update/update.component';
 import { CompteComponent } from './compte/compte.component';
 import { HomeComponent } from './compte/home/home.component';
 import { LoginComponent } from './compte/login/login.component';
+import { CandidatBvComponent } from './candidat-bv/candidat-bv.component';
 
 
 const routes: Routes = [  { path: 'users', component: CreateComponent },
 { path: 'register', component: InscriptionComponent },
+{ path: 'candidatBv', component: CandidatBvComponent },
 { path: 'update/:id', component: UpdateComponent },
 { path: 'compte', component: CompteComponent },
 { path: '', component: HomeComponent },
