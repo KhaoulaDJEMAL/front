@@ -15,5 +15,9 @@ import { CandidatBv } from '../models/candidatBv';
     createCandidatBv(candidatBv: CandidatBv): Observable<Object> {
       return this.http.post("http://localhost:8080/api/create-candidatBv", candidatBv, {responseType:'text' as 'json'});
     }
+
+    public getCandidatBvList(): Observable<any> {
+      return this.http.get("http://localhost:8080/api/zoneConsulaire");
+    }
     
   }

@@ -65,23 +65,46 @@
         <label for="name">dateCandidature</label>
         <input type="date" class="form-control" id="dateCandidature" required [(ngModel)]="candidatBv.dateCandidature" name="dateCandidature">
     </div>
-
-    <div class="form-group">
-        <label for="name">zoneConsulaireId</label>
-        <input type="text" class="form-control" id="zoneConsulaireId" required [(ngModel)]="candidatBv.zoneConsulaireId" name="zoneConsulaireId">
+   <div class="form-group">
+    <select  [(ngModel)]="candidatBv.zoneConsulaireId" name="zoneConsulaireId">  
+        <option disabled>Select Oppo Suits</option>
+        <option>Choose oppo suit</option>
+        <option *ngFor="let candidate of zoneConsulaire | async" value={{candidate.id}}>{{candidate.libelle}} </option>  
+    </select> 
     </div>
 
+
+<!--      <div class="form-group">
+        <label for="name">zoneConsulaireId</label>
+        <input type="text" class="form-control" id="zoneConsulaireId" required [(ngModel)]="candidatBv.zoneConsulaireId" name="zoneConsulaireId">
+    </div> 
+ -->
     <div class="form-group">
         <label for="name">circonscriptionId</label>
         <input type="text" class="form-control" id="circonscriptionId" required [(ngModel)]="candidatBv.circonscriptionId" name="circonscriptionId">
     </div>
 
-   <div class="form-group">
+<!--    <div class="form-group">
         <label for="name">sexe</label>
         <input type="text" class="form-control" id="sexe" required [(ngModel)]="candidatBv.sexe" name="sexe">
-    </div> 
+    </div>  -->
+
+    <div class="form-check">
+        <label for="name">sexe</label><br>
+        <input class="form-check-input" type="radio" name="sexe" id="sexe" value="Homme" [(ngModel)]="candidatBv.sexe" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Homme
+        </label>
+      <br>
+        <input class="form-check-input" type="radio" name="sexe" id="sexe" value="Femme" [(ngModel)]="candidatBv.sexe" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Femme
+        </label>
+        <br>
+    </div>
 
     <div class="form-group">
+        <br>
         <label for="name">adresseId</label>
         <input type="text" class="form-control" id="adresseId" required [(ngModel)]="candidatBv.adresseId" name="adresseId">
     </div>
@@ -103,3 +126,5 @@
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>
+
+
