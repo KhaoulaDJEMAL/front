@@ -12,6 +12,15 @@ import { CompteComponent } from './compte/compte.component';
 import { HomeComponent } from './compte/home/home.component';
 import { LoginComponent } from './compte/login/login.component';
 import { CandidatBvComponent } from './candidat-bv/candidat-bv.component';
+import { CreationBeneficiaireComponent } from './creation-beneficiaire/creation-beneficiaire.component';
+import { BeneficiaireListComponent } from './creation-beneficiaire/beneficiaire-list/beneficiaire-list.component';
+import { ReunionComponent } from './reunion/reunion.component';
+import { ReunionListComponent } from './reunion/reunion-list/reunion-list.component';
+import { MembreComponent } from './membre/membre.component';
+import { MembreListComponent } from './membre/membre-list/membre-list.component';
+import { NgbdModalComponent, NgbdModalContent } from './modal-component/modal-component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -22,17 +31,27 @@ import { CandidatBvComponent } from './candidat-bv/candidat-bv.component';
     CompteComponent,    
     HomeComponent,
     LoginComponent,
-    CandidatBvComponent
-  ],
+    CandidatBvComponent,
+    CreationBeneficiaireComponent,
+    BeneficiaireListComponent,
+    ReunionComponent,
+    ReunionListComponent,
+    MembreComponent,
+    MembreListComponent,
+    NgbdModalComponent, 
+    NgbdModalContent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
+  exports: [NgbdModalComponent],
+  entryComponents: [NgbdModalContent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NgbdModalComponent]
 })
 export class AppModule { }

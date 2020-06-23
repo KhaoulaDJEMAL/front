@@ -1,0 +1,113 @@
+<h3>Inscription d'un Candidat </h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="name">matricule</label>
+      <input type="text" class="form-control" id="matricule" required [(ngModel)]="beneficiaire.matricule" name="matricule">
+    </div>
+
+<!--     <div class="form-group">
+        <label for="name">estActif</label>
+        <input type="text" class="form-control" id="estActif" required [(ngModel)]="beneficiaire.estActif" name="estActif">
+      </div>
+ -->
+  <div class="form-group">
+    <div class="form-check form-check-inline">
+      <label for="name">estActif</label>
+        <br>
+        <input class="form-check-input" type="checkbox" name="estActif" id="estActif" value="1" [(ngModel)]="beneficiaire.estActif" checked>
+    </div>
+  </div>
+  <!--     <div class="form-group">
+        <label for="name">estDivorce</label>
+        <input type="text" class="form-control" id="estDivorce" required [(ngModel)]="beneficiaire.estDivorce" name="estDivorce">
+      </div> -->
+      
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <label for="name">estDivorce</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="estDivorce" id="estDivorce" value="1" [(ngModel)]="beneficiaire.estDivorce" checked>
+        </div>
+      </div>
+
+ <!--      <div class="form-group">
+        <label for="name">estVeuve</label>
+        <input type="text" class="form-control" id="estVeuve" required [(ngModel)]="beneficiaire.estVeuve" name="estVeuve">
+      </div> -->
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <label for="name">estVeuve</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="estVeuve" id="estVeuve" value="1" [(ngModel)]="beneficiaire.estVeuve" checked>
+        </div>
+      </div>
+
+<!--       <div class="form-group">
+        <label for="name">orphelin1</label>
+        <input type="text" class="form-control" id="orphelin1" required [(ngModel)]="beneficiaire.orphelin1" name="orphelin1">
+      </div> -->
+
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <label for="name">orphelin1</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="orphelin1" id="orphelin1" value="1" [(ngModel)]="beneficiaire.orphelin1" checked>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">nbMembreFamille</label>
+        <input type="text" class="form-control" id="nbMembreFamille" required [(ngModel)]="beneficiaire.nbMembreFamille" name="nbMembreFamille">
+      </div>
+
+      <div class="form-group">
+        <label for="name">nbOrphelin</label>
+        <input type="text" class="form-control" id="nbOrphelin" required [(ngModel)]="beneficiaire.nbOrphelin" name="nbOrphelin">
+      </div>
+
+      <div class="form-group">
+        <label for="name">nbMembresResidents</label>
+        <input type="text" class="form-control" id="nbMembresResidents" required [(ngModel)]="beneficiaire.nbMembresResidents" name="nbMembresResidents">
+      </div>
+
+      <div class="form-group">
+        <label for="name">nbMembresHandicape</label>
+        <input type="text" class="form-control" id="nbMembresHandicape" required [(ngModel)]="beneficiaire.nbMembresHandicape" name="nbMembresHandicape">
+      </div>
+
+      <div class="form-group">
+        <label for="name">revenuMensuel</label>
+        <input type="text" class="form-control" id="revenuMensuel" required [(ngModel)]="beneficiaire.revenuMensuel" name="revenuMensuel">
+      </div>
+
+      <div class="form-group">
+        <label for="name">coutDepenseFixe</label>
+        <input type="text" class="form-control" id="coutDepenseFixe" required [(ngModel)]="beneficiaire.coutDepenseFixe" name="coutDepenseFixe">
+      </div>
+<!-- 
+      <div class="form-group">
+        <label for="name">tblEtatSocialId</label>
+        <input type="text" class="form-control" id="tblEtatSocialId" required [(ngModel)]="beneficiaire.tblEtatSocialId" name="tblEtatSocialId">
+      </div> -->
+
+
+      <div class="form-group">
+        <label for="name">Etat Social</label>
+        <select  [(ngModel)]="beneficiaire.tblEtatSocialId" name="tblEtatSocialId">  
+            <option *ngFor="let etatSoc of etatSocial | async" value={{etatSoc.id}}>{{etatSoc.libelle}} </option>  
+        </select> 
+        </div>
+
+      <div class="form-group">
+        <label for="name">nom</label>
+        <input type="text" class="form-control" id="nom" required [(ngModel)]="beneficiaire.nom" name="nom">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+alooo
+<ngbd-modal-component></ngbd-modal-component>
