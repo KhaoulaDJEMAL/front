@@ -25,11 +25,16 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/fonts/material-design-iconic-font/css/material-design-iconic-font.css",
+              "src/assets/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/jquery.steps.js"
             ]
           },
           "configurations": {

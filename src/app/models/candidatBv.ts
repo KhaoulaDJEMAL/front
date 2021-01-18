@@ -1,4 +1,6 @@
-export class CandidatBv {
+import { Adresse } from './adresse';
+
+export interface CandidatBv {
  
     id: number;
     cin: string;
@@ -16,11 +18,11 @@ export class CandidatBv {
     dateCandidature: string;
     zoneConsulaireId: number;
     circonscriptionId: number;
-    adresseId: number;
     fonctionId: number;
     niveauEtudeId:number;
     pjCandidatureBvId:number;
     sexe:string;
+    adr: Adresse; 
     
   }
   

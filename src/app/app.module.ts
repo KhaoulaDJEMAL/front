@@ -3,55 +3,45 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateComponent } from './create/create.component';
 import { HttpClientModule } from '@angular/common/http';
-import { InscriptionComponent } from './inscription/inscription.component';
-import { FormsModule } from '@angular/forms';
-import { UpdateComponent } from './update/update.component';
-import { CompteComponent } from './compte/compte.component';
-import { HomeComponent } from './compte/home/home.component';
-import { LoginComponent } from './compte/login/login.component';
 import { CandidatBvComponent } from './candidat-bv/candidat-bv.component';
-import { CreationBeneficiaireComponent } from './creation-beneficiaire/creation-beneficiaire.component';
-import { BeneficiaireListComponent } from './creation-beneficiaire/beneficiaire-list/beneficiaire-list.component';
-import { ReunionComponent } from './reunion/reunion.component';
-import { ReunionListComponent } from './reunion/reunion-list/reunion-list.component';
-import { MembreComponent } from './membre/membre.component';
-import { MembreListComponent } from './membre/membre-list/membre-list.component';
-import { NgbdModalComponent, NgbdModalContent } from './modal-component/modal-component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EtapeDocumentComponent } from './candidat-bv/etape-document/etape-document.component';
+import {Ng7BootstrapBreadcrumbModule} from 'ng7-bootstrap-breadcrumb';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StepsComponent } from './steps/steps.component';
+import { StepTemplateComponent } from './step-template/step-template.component';
+import { FormPageComponent } from './form-page/form-page.component';
+import { CompletePageComponent } from './complete-page/complete-page.component';
+import { BreadcrumbComponent } from './commons/breadcrumb/breadcrumb.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateComponent,
-    InscriptionComponent,
-    UpdateComponent,
-    CompteComponent,    
-    HomeComponent,
-    LoginComponent,
     CandidatBvComponent,
-    CreationBeneficiaireComponent,
-    BeneficiaireListComponent,
-    ReunionComponent,
-    ReunionListComponent,
-    MembreComponent,
-    MembreListComponent,
-    NgbdModalComponent, 
-    NgbdModalContent
-    ],
+    EtapeDocumentComponent,
+    StepsComponent,
+    StepTemplateComponent,
+    FormPageComponent,
+    CompletePageComponent,
+    BreadcrumbComponent
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    Ng7BootstrapBreadcrumbModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
-  exports: [NgbdModalComponent],
-  entryComponents: [NgbdModalContent],
-  providers: [],
-  bootstrap: [AppComponent, NgbdModalComponent]
+  exports: [],
+  entryComponents: [],
+  providers: [NgxSpinnerService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
